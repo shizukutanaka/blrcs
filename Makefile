@@ -141,7 +141,7 @@ precommit: fmt verify
 #   blrcs/.github/workflows/ci.yml to .github/workflows/, this is the only
 #   automatic execution of the gate that exists. Per clone, once.
 hooks:
-	@git -C .. config core.hooksPath .githooks
+	@git config core.hooksPath .githooks
 	@echo "core.hooksPath = .githooks — 'git push' now runs 'make verify' when blrcs/ changed"
 
 # ============================================================================

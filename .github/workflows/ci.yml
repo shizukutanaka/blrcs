@@ -1,34 +1,22 @@
 name: BLRCS (Go)
 
 # ###########################################################################
-# THIS FILE DOES NOT RUN WHERE IT CURRENTLY LIVES. To activate it:
+# This workflow became active when blrcs was split out of the BLNCS monorepo
+# into this standalone repository: it now lives at the repository-root
+# .github/workflows/ directory, and the code it gates sits at the root too,
+# so no working-directory or path prefixes are needed anymore.
 #
-#     git mv blrcs/.github/workflows/ci.yml .github/workflows/blrcs-go.yml
-#
-# GitHub executes workflows ONLY from the repository-root .github/workflows/
-# directory. Sitting at blrcs/.github/workflows/, this file has never run a
-# single job. The body has been corrected and is ready to run as-is once moved
-# (it already assumes the root location: see defaults.run.working-directory and
-# the blrcs/-prefixed artifact paths).
-#
-# The move is not automated here because the CI identity that maintains this
-# repository lacks the GitHub `workflows` permission and so cannot create or
-# update files under the root .github/workflows/ directory. A maintainer must
-# run the command above, or grant that permission.
-#
-# NOTE: the gate itself does not depend on this file. `make verify` in blrcs/
-# runs the complete gate — build, gofmt, vet, zero-dependency proof, race
-# tests, lint, and every fuzz target — in about 45 seconds. This workflow
-# exists to run that same command on every push; it is not a second definition
-# of what "passing" means.
+# NOTE: the gate itself does not depend on this file. `make verify` runs the
+# complete gate — build, gofmt, vet, zero-dependency proof, race tests, lint,
+# and every fuzz target — in about 45 seconds. This workflow exists to run
+# that same command on every push; it is not a second definition of what
+# "passing" means.
 # ###########################################################################
 on:
   push:
     branches: [main]
-    paths: ['blrcs/**', '.github/workflows/blrcs-go.yml']
   pull_request:
     branches: [main]
-    paths: ['blrcs/**', '.github/workflows/blrcs-go.yml']
   workflow_dispatch:
 
 permissions:
@@ -37,10 +25,6 @@ permissions:
 concurrency:
   group: blrcs-go-${{ github.ref }}
   cancel-in-progress: true
-
-defaults:
-  run:
-    working-directory: blrcs
 
 jobs:
   # The gate. One target, identical to what a developer runs locally, so CI and
@@ -59,7 +43,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: ${{ matrix.go }}
-          cache-dependency-path: blrcs/go.mod
+          cache-dependency-path: go.mod
 
       - name: Install golangci-lint
         # make verify SKIPs lint when the tool is absent rather than failing, so
@@ -68,7 +52,6 @@ jobs:
         uses: golangci/golangci-lint-action@v6
         with:
           version: latest
-          working-directory: blrcs
           args: --timeout=5m
 
       - name: make verify
@@ -83,13 +66,12 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 'stable'
-          cache-dependency-path: blrcs/go.mod
+          cache-dependency-path: go.mod
       - run: make cover
       - uses: actions/upload-artifact@v4
         with:
           name: coverage
-          # Paths in `uses:` steps ignore defaults.run.working-directory.
-          path: blrcs/coverage.out
+          path: coverage.out
 
   security:
     runs-on: ubuntu-latest
@@ -98,7 +80,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 'stable'
-          cache-dependency-path: blrcs/go.mod
+          cache-dependency-path: go.mod
       - name: govulncheck (known CVEs, incl. the Go toolchain itself)
         run: |
           go install golang.org/x/vuln/cmd/govulncheck@latest
@@ -111,7 +93,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 'stable'
-          cache-dependency-path: blrcs/go.mod
+          cache-dependency-path: go.mod
       - name: Generate SBOM (CycloneDX)
         run: |
           go install github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx-gomod@latest
@@ -119,4 +101,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: sbom
-          path: blrcs/sbom.cyclonedx.json
+          path: sbom.cyclonedx.json

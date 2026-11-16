@@ -1,5 +1,7 @@
 # BLRCS
 
+> **Provenance:** This project was originally developed inside the [BLNCS](https://github.com/shizukutanaka/BLNCS) monorepo under `blrcs/` and was split into this standalone repository in November 2026. The history below starts at the Go project's first commit (June 2026) and is complete from that point on.
+
 **Blockchain Logistics / Compliance / Supply chain** — production-grade Go reference implementation for EU Digital Product Passport (ESPR) + Battery Passport (Reg 2023/1542), with W3C VC, IETF SCITT transparency log, OpenID4VP/VCI wallet integration, and W3C Digital Credentials API browser support.
 
 ```
