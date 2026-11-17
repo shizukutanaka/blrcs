@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/types"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/types"
 )
 
 // ============================================================================

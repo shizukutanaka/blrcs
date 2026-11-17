@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/revocation"
 )
 
 // toolResultText extracts the text payload from a JSON-RPC tools/call response.

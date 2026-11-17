@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // buildLedger registers n statements and returns the ledger.

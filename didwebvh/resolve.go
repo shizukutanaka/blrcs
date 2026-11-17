@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // CreateParams configures genesis creation of a did:webvh log.

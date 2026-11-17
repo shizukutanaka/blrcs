@@ -10,7 +10,7 @@ import (
 	"errors"
 	"testing"
 
-	"blrcs/didwebvh"
+	"github.com/shizukutanaka/blrcs/didwebvh"
 )
 
 // ============================================================================

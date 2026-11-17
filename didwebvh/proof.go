@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // eddsa-jcs-2022 signing input (W3C Data Integrity):

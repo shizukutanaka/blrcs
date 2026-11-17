@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 func genKey(t *testing.T) (ed25519.PrivateKey, string) {

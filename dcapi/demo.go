@@ -14,7 +14,7 @@ import (
 	"net/http"
 	"strings"
 
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 // DemoHandler — DC-API クライアント側JSを含むシングルページ

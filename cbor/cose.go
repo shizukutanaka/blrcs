@@ -19,10 +19,10 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 
-	"blrcs/ecdsakey"
 	"crypto/ed25519"
 	"errors"
 	"fmt"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 	"sync"
 )
 

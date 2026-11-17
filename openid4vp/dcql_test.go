@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // helpers shared across complexity tests

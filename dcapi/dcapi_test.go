@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 func TestIsSupported(t *testing.T) {

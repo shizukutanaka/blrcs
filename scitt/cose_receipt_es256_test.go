@@ -7,8 +7,8 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"blrcs/cbor"
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // es256Fixture registers one statement on a fresh ledger and returns the

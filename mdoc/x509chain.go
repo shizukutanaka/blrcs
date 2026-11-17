@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/cbor"
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // ============================================================================

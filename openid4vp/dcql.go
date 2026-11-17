@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // DCQL complexity bounds — guard against DoS via crafted Authorization Requests.

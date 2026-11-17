@@ -30,7 +30,7 @@ import (
 	"sync"
 	"time"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // ============================================================================

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/revocation"
 )
 
 // TestIssueSDJWTBoundStatus proves a credential can be both holder-bound (cnf, for

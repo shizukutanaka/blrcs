@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/scitt"
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 func setupServer(t *testing.T) (*Server, *compliance.Issuer, *compliance.SensorAttester) {

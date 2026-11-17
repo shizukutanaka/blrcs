@@ -35,7 +35,7 @@ import (
 	"sync"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 var (

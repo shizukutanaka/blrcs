@@ -9,9 +9,9 @@ import (
 	"errors"
 	"math/big"
 
-	"blrcs/ecdsakey"
-	"blrcs/jwe"
-	"blrcs/openid4vci"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/jwe"
+	"github.com/shizukutanaka/blrcs/openid4vci"
 )
 
 // ============================================================================

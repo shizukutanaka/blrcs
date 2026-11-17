@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 func setupDemo(t *testing.T) (*httptest.Server, *compliance.Issuer, *openid4vp.Verifier) {

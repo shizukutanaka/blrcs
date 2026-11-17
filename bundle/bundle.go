@@ -69,11 +69,11 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/didwebvh"
-	"blrcs/multiformats"
-	"blrcs/revocation"
-	"blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/didwebvh"
+	"github.com/shizukutanaka/blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/scitt"
 )
 
 // Version identifies the bundle wire format.

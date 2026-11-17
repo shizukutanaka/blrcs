@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // ============================================================================

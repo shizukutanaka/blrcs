@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // ============================================================================

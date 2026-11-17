@@ -11,8 +11,8 @@ import (
 	"sync"
 	"testing"
 
-	"blrcs/cbor"
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 func mustIssuer(t *testing.T, id string) (ed25519.PrivateKey, ed25519.PublicKey) {

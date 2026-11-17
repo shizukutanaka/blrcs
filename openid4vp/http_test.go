@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 func TestAuthorizeHandler(t *testing.T) {

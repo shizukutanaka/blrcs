@@ -39,7 +39,7 @@ import (
 	"strconv"
 	"strings"
 
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // Method is the DID method name.

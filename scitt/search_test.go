@@ -4,7 +4,7 @@ import (
 	"crypto/ed25519"
 	"testing"
 
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 // ============================================================================

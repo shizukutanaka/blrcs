@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // kbSegment returns the KB-JWT appended to a presentation.

@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // ============================================================================

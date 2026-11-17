@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"blrcs/compliance"
-	"blrcs/didresolver"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/didresolver"
 )
 
 // Demonstrates resolving a did:key — no network required.

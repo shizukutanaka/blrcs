@@ -37,8 +37,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/cbor"
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // MSO constants (ISO 18013-5 §9.1.2).

@@ -3,7 +3,7 @@ package mdoc
 import (
 	"fmt"
 
-	"blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/cbor"
 )
 
 // Present produces a selectively-disclosed IssuerSigned: it keeps only the

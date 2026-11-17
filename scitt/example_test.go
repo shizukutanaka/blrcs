@@ -3,8 +3,8 @@ package scitt_test
 import (
 	"fmt"
 
-	"blrcs/compliance"
-	"blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/scitt"
 )
 
 func Example_transparencyLog() {

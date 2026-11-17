@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 func TestLedgerPersistence(t *testing.T) {

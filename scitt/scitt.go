@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 var (

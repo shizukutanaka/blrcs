@@ -28,17 +28,17 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/cbor"
-	"blrcs/compliance"
-	"blrcs/didwebvh"
-	"blrcs/errkit"
-	"blrcs/jsonschema"
-	"blrcs/mdoc"
-	"blrcs/multiformats"
-	"blrcs/openid4vp"
-	"blrcs/revocation"
-	"blrcs/scitt"
-	"blrcs/types"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/didwebvh"
+	"github.com/shizukutanaka/blrcs/errkit"
+	"github.com/shizukutanaka/blrcs/jsonschema"
+	"github.com/shizukutanaka/blrcs/mdoc"
+	"github.com/shizukutanaka/blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/types"
 )
 
 // ============================================================================

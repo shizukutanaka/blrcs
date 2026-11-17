@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // TestES256IssuerAlgMatchesWhatItSigns is the label-matches-act assertion applied

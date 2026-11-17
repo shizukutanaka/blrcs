@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // boundPresent issues a holder-bound SD-JWT and returns a KB-JWT presentation

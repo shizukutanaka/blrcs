@@ -26,7 +26,7 @@ import (
 	"runtime/debug"
 	"time"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // ============================================================================

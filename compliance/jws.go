@@ -1,8 +1,8 @@
 package compliance
 
 import (
-	"blrcs/ecdsakey"
 	"crypto/ed25519"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 	"sync"
 )
 

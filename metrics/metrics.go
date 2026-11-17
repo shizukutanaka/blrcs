@@ -20,7 +20,7 @@ import (
 	"strings"
 	"time"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // ============================================================================

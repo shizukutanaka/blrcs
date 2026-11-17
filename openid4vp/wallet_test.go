@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 func TestBuildCredentialOfferURL(t *testing.T) {
