@@ -131,7 +131,7 @@ func VerifyWithWitnesses(log []LogEntry, witnessLog WitnessLog) (*Resolution, er
 		}
 		predecessor := ""
 		if i > 0 {
-			predecessor = log[i-1].VersionID
+			predecessor = log[i-1].VersionID //nolint:gosec // G602: guarded by the enclosing if i > 0
 		}
 		valid, verr := countValidWitnessProofs(entry, predecessor, byVersion[entry.VersionID], wc.Witnesses)
 		if verr != nil {

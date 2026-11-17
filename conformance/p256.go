@@ -187,7 +187,7 @@ func p256PrivFromScalar(hexD string) (*ecdsa.PrivateKey, error) {
 	priv := new(ecdsa.PrivateKey)
 	priv.Curve = elliptic.P256()
 	priv.D = d
-	priv.X, priv.Y = elliptic.P256().ScalarBaseMult(d.Bytes())
+	priv.X, priv.Y = elliptic.P256().ScalarBaseMult(d.Bytes()) //nolint:staticcheck // SA1019: d is range-checked against the curve order above; ScalarBaseMult is the direct construction of the conformance key from its published scalar
 	return priv, nil
 }
 
