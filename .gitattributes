@@ -1,0 +1,11 @@
+# Line endings — canonical form in this repository is LF (.editorconfig
+# already declares end_of_line = lf, but editors are not the checkout path).
+#
+# Without this file, Git for Windows' default core.autocrlf=true rewrites
+# text files to CRLF at checkout. gofmt's canonical output is LF, so
+# `make verify`'s fmt-check then reported essentially every Go file as
+# unformatted and both Windows CI legs died before any real check ran
+# (reproduced locally: an autocrlf=true checkout flags 229 files; the
+# committed tree is pure LF). Attributes override core.autocrlf, so this
+# makes a Windows checkout byte-identical to a Linux one.
+* text=auto eol=lf

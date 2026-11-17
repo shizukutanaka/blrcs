@@ -6,7 +6,7 @@ version: "2"
 
 run:
   tests: true
-  go: "1.22"
+  go: "1.23"
 
 linters:
   # Correctness + security gate. This set is enforced green in CI.
