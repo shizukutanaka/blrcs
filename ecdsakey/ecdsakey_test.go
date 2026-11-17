@@ -156,7 +156,7 @@ func TestDegenerateKeyEncodings(t *testing.T) {
 	if err != nil {
 		t.Fatalf("compressed x=0 is a real curve point and should parse: %v", err)
 	}
-	if key.X.Sign() != 0 || !elliptic.P256().IsOnCurve(key.X, key.Y) {
+	if key.X.Sign() != 0 || !elliptic.P256().IsOnCurve(key.X, key.Y) { //nolint:staticcheck // SA1019: the legacy IsOnCurve is the independent cross-check this test exists to make (see the doc comment above)
 		t.Error("decoded point should be x=0 and on the curve")
 	}
 	// It must still be useless to a forger: no signature verifies under it.

@@ -728,10 +728,10 @@ func base58Decode(s string) ([]byte, error) {
 	length := 0
 	for i := zeros; i < len(s); i++ {
 		c := s[i]
-		if c >= 128 || inv[c] == -1 {
+		if c >= 128 || inv[c] == -1 { //nolint:gosec // G602: || short-circuits — inv[c] is evaluated only when c < 128, and inv has 128 entries
 			return nil, fmt.Errorf("base58: invalid char %q", c)
 		}
-		carry := int(inv[c])
+		carry := int(inv[c]) //nolint:gosec // G602: c passed the c < 128 guard immediately above
 		j := 0
 		for k := size - 1; (carry != 0 || j < length) && k >= 0; k, j = k-1, j+1 {
 			carry += 58 * int(b[k])

@@ -1162,7 +1162,7 @@ func (iss *Issuer) handleToken(w http.ResponseWriter, r *http.Request) {
 		}
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Cache-Control", "no-store")
-		_ = json.NewEncoder(w).Encode(tr)
+		_ = json.NewEncoder(w).Encode(tr) //nolint:gosec // G117: this is the token endpoint — the access_token field is the response's purpose, sent with Cache-Control: no-store
 		return
 	default:
 		writeVCIError(w, http.StatusBadRequest, "unsupported_grant_type", "supported grants: pre-authorized_code, authorization_code")
@@ -1183,7 +1183,7 @@ func (iss *Issuer) handleToken(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Cache-Control", "no-store")
-	_ = json.NewEncoder(w).Encode(tr)
+	_ = json.NewEncoder(w).Encode(tr) //nolint:gosec // G117: this is the token endpoint — the access_token field is the response's purpose, sent with Cache-Control: no-store
 }
 
 func (iss *Issuer) handleCredential(w http.ResponseWriter, r *http.Request) {

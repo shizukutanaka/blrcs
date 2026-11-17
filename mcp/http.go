@@ -239,7 +239,7 @@ func (h *HTTPHandler) handleGet(w http.ResponseWriter, r *http.Request, principa
 	// treat as success rather than aborting the stream.
 	writeEvent := func(s string) bool {
 		_ = rc.SetWriteDeadline(time.Now().Add(sseWriteTimeout))
-		if _, err := io.WriteString(w, s); err != nil {
+		if _, err := io.WriteString(w, s); err != nil { //nolint:gosec // G705: s is a server-generated SSE frame (connect banner / heartbeat comment); no request data flows in, and the content type is text/event-stream
 			return false
 		}
 		if err := rc.Flush(); err != nil && !errors.Is(err, http.ErrNotSupported) {

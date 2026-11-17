@@ -6,7 +6,7 @@ production-grade Go — please read this guide before submitting changes.
 
 ## Prerequisites
 
-- Go 1.22+
+- Go 1.23+
 - No other tools required — BLRCS has zero external dependencies
 
 ## Getting Started

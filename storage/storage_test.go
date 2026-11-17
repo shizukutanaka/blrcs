@@ -643,6 +643,15 @@ func TestIterateStatementsOpenFails(t *testing.T) {
 	if _, err := s.AppendStatement([]byte(`{"a":1}`)); err != nil {
 		t.Fatal(err)
 	}
+	// Close the storage before deleting the file: FileStorage holds the
+	// ledger open for appends for its whole lifetime, and Windows refuses
+	// to delete a file that still has an open handle (POSIX unlink permits
+	// it, which is why this only failed on Windows). IterateStatements
+	// does not consult the closed flag — it goes straight to os.Open — so
+	// closing first leaves the open-failure path under test unchanged.
+	if err := s.Close(); err != nil {
+		t.Fatal(err)
+	}
 	// Delete the ledger file — IterateStatements.os.Open will fail.
 	if err := os.Remove(filepath.Join(dir, ledgerFileName)); err != nil {
 		t.Fatal(err)
