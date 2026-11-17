@@ -24,6 +24,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"runtime"
 	"sync"
 )
 
@@ -240,10 +241,22 @@ func NewFileStorage(dir string) (*FileStorage, error) {
 }
 
 // syncDir fsyncs a directory so newly created/renamed entries survive a crash.
+//
+// Windows is exempt, by platform rather than by error matching: os.File.Sync
+// calls FlushFileBuffers, which requires a handle opened for writing and
+// always fails on a directory handle ("Access is denied"). Windows offers no
+// directory-flush API at all — NTFS journals directory metadata itself, so
+// once the file's own Sync has returned (callers do that before syncDir), the
+// entry is as durable as the platform makes it and there is nothing further
+// to flush. The directory is still opened so a missing path fails the same
+// way on every OS.
 func syncDir(dir string) error {
 	d, err := os.Open(dir)
 	if err != nil {
 		return err
+	}
+	if runtime.GOOS == "windows" {
+		return d.Close()
 	}
 	if err := d.Sync(); err != nil {
 		_ = d.Close()
