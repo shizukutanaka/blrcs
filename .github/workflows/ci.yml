@@ -49,9 +49,21 @@ jobs:
         # make verify SKIPs lint when the tool is absent rather than failing, so
         # CI must install it explicitly — otherwise the gate would silently run
         # weaker here than on a developer machine.
-        uses: golangci/golangci-lint-action@v6
+        #
+        # The committed .golangci.yml is schema v2, so the v2 line of the tool
+        # is required: action v6 installs golangci-lint v1.x, whose
+        # `config verify` rejects the v2 config ("additional properties
+        # 'version'/'default'/'settings' not allowed") and the job died before
+        # `make verify` ever ran. Action v7 is the first release line that
+        # supports golangci-lint v2.
+        #
+        # The version is pinned (not `latest`) to the release the config is
+        # verified against locally, so a tool release cannot silently change
+        # what the gate enforces — bump it deliberately, with a local
+        # `make verify` run, when upgrading.
+        uses: golangci/golangci-lint-action@v7
         with:
-          version: latest
+          version: v2.15.0
           args: --timeout=5m
 
       - name: make verify
