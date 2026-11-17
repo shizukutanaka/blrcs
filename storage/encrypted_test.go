@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/atrest"
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/atrest"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 func newTestCipher(t *testing.T) *atrest.Cipher {

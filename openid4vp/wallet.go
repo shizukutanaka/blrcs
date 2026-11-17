@@ -21,7 +21,7 @@ import (
 	"net/url"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // CredentialOffer — Wallet に「この DPP を保存する？」と聞くオファー

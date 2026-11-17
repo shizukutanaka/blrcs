@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"blrcs/jsonschema"
+	"github.com/shizukutanaka/blrcs/jsonschema"
 )
 
 var (

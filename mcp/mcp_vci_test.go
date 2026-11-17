@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/compliance"
-	"blrcs/openid4vci"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/openid4vci"
 )
 
 // ============================================================================

@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // TestHTTPHandlerCloseStopsGCGoroutine verifies that Close stops the background

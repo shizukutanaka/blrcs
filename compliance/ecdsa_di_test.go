@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/ecdsakey"
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // ============================================================================

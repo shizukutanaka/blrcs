@@ -23,10 +23,10 @@ import (
 	"fmt"
 	"os"
 
-	"blrcs/atrest"
-	"blrcs/compliance"
-	"blrcs/mcp"
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/atrest"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/mcp"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 func main() {

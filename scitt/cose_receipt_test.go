@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/cbor"
 )
 
 func TestCOSEReceiptRoundtrip(t *testing.T) {

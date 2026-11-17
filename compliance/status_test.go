@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/revocation"
 )
 
 // TestCheckRevokedTokenEndToEnd — issue a credential with a status ref, publish

@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/ecdsakey"
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // W3C Data Integrity — eddsa-jcs-2022 cryptosuite (W3C EdDSA Cryptosuites v1.0,

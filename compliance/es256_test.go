@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // ============================================================================

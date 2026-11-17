@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/didresolver"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/didresolver"
 )
 
 // ============================================================================

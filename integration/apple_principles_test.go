@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/errkit"
-	"blrcs/telemetry"
-	"blrcs/types"
+	"github.com/shizukutanaka/blrcs/errkit"
+	"github.com/shizukutanaka/blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/types"
 )
 
 // captureRec — テストで Telemetry 出力を確認

@@ -20,11 +20,11 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/cas"
-	"blrcs/compliance"
-	"blrcs/errkit"
-	"blrcs/scitt"
-	"blrcs/types"
+	"github.com/shizukutanaka/blrcs/cas"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/errkit"
+	"github.com/shizukutanaka/blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/types"
 )
 
 // ============================================================================

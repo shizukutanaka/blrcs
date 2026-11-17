@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/didwebvh"
-	"blrcs/revocation"
-	"blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/didwebvh"
+	"github.com/shizukutanaka/blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/scitt"
 )
 
 // ============================================================================

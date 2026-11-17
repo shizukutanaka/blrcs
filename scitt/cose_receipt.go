@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/cbor"
 )
 
 // Payload map keys for COSE receipts.

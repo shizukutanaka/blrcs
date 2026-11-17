@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 func makeTelWithData(t *testing.T) *telemetry.Telemetry {

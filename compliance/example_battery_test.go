@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // Demonstrates issuing a fully EU 2023/1542 Annex XIII-compliant battery passport.

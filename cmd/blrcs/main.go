@@ -16,7 +16,7 @@ import (
 	"os"
 	"time"
 
-	"blrcs/doctor"
+	"github.com/shizukutanaka/blrcs/doctor"
 )
 
 const version = "1.0.0"

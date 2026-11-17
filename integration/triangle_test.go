@@ -9,9 +9,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"blrcs/compliance"
-	"blrcs/openid4vci"
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/openid4vci"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 func TestTriangle_IssuerWalletVerifier(t *testing.T) {

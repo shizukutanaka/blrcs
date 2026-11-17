@@ -3,7 +3,7 @@ package openid4vp_test
 import (
 	"fmt"
 
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 // Demonstrates an OpenID4VP v1.0 verifier requesting a DPP credential via DCQL.

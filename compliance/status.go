@@ -3,7 +3,7 @@ package compliance
 import (
 	"crypto/ed25519"
 
-	"blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/revocation"
 )
 
 // ============================================================================

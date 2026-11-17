@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // ============================================================================

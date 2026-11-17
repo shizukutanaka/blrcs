@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"blrcs/ecdsakey"
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // TestParseDIDDocP256MultibaseKey covers the P-256 branch of

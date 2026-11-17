@@ -11,9 +11,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"blrcs/compliance"
-	"blrcs/ecdsakey"
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // ============================================================================

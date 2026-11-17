@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // PrivateKey — ed25519 private key (SCITT 署名、MCP dispatch 用)

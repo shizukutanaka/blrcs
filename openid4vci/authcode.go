@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // ============================================================================

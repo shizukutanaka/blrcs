@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/cbor"
-	"blrcs/mdoc"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/mdoc"
 )
 
 // ============================================================================

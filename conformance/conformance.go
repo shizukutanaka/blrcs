@@ -30,10 +30,10 @@ import (
 	"errors"
 	"fmt"
 
-	"blrcs/compliance"
-	"blrcs/openid4vp"
-	"blrcs/scitt"
-	"blrcs/types"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/types"
 )
 
 // ============================================================================

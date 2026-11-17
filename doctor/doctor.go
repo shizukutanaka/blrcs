@@ -32,12 +32,12 @@ import (
 	"strings"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/mdoc"
-	"blrcs/revocation"
-	"blrcs/scitt"
-	"blrcs/storage"
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/mdoc"
+	"github.com/shizukutanaka/blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/scitt"
+	"github.com/shizukutanaka/blrcs/storage"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // ============================================================================

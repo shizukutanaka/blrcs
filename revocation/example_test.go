@@ -3,7 +3,7 @@ package revocation_test
 import (
 	"fmt"
 
-	"blrcs/revocation"
+	"github.com/shizukutanaka/blrcs/revocation"
 )
 
 // Demonstrates the W3C Bitstring Status List v1.0 revocation flow.

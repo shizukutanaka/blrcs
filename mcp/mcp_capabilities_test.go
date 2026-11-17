@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 // TestServerCapabilitiesDefault verifies an in-memory server reports the

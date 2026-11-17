@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // TestServerConcurrentUse establishes, rather than assumes, that a Server can be

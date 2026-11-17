@@ -28,7 +28,7 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // Wrap — net/http.Handler を panic 回復付きでラップ

@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/telemetry"
+	"github.com/shizukutanaka/blrcs/telemetry"
 )
 
 // captureRec — テスト用 in-memory recorder

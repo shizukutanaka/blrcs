@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 func setupIssuer(t *testing.T) (*Issuer, *compliance.Issuer) {

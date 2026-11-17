@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // ============================================================================

@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/cbor"
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // VerifiedDoc is the result of verifying an IssuerSigned mdoc.

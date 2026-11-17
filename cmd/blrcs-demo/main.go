@@ -17,11 +17,11 @@ import (
 	"syscall"
 	"time"
 
-	"blrcs/compliance"
-	"blrcs/dcapi"
-	"blrcs/httpmw"
-	"blrcs/openid4vp"
-	"blrcs/tlsharden"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/dcapi"
+	"github.com/shizukutanaka/blrcs/httpmw"
+	"github.com/shizukutanaka/blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/tlsharden"
 )
 
 func main() {

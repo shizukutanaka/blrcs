@@ -26,7 +26,7 @@ import (
 	"errors"
 	"fmt"
 
-	"blrcs/openid4vp"
+	"github.com/shizukutanaka/blrcs/openid4vp"
 )
 
 // Protocol — W3C FedID protocol identifier

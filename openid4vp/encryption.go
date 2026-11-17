@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strings"
 
-	"blrcs/ecdsakey"
-	"blrcs/jwe"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/jwe"
 )
 
 // ============================================================================

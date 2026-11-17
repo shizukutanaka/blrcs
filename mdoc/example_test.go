@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/mdoc"
+	"github.com/shizukutanaka/blrcs/mdoc"
 )
 
 // Example shows the full mdoc lifecycle: an issuer issues a credential, a holder

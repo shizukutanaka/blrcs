@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"blrcs/compliance"
-	"blrcs/didwebvh"
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/didwebvh"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // ============================================================================

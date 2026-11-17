@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // ============================================================================

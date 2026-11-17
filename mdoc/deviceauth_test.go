@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/cbor"
 )
 
 // marshalDocNoDeviceAuth builds a Document containing issuerSigned but no

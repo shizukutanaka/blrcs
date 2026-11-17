@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/compliance"
+	"github.com/shizukutanaka/blrcs/compliance"
 )
 
 // ============================================================================

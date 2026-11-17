@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/cbor"
+	"github.com/shizukutanaka/blrcs/cbor"
 )
 
 func testKeys(t *testing.T) (ed25519.PrivateKey, ed25519.PublicKey) {

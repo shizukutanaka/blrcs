@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // ============================================================================

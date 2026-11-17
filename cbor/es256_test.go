@@ -7,7 +7,7 @@ import (
 	"crypto/sha256"
 	"testing"
 
-	"blrcs/ecdsakey"
+	"github.com/shizukutanaka/blrcs/ecdsakey"
 )
 
 // ============================================================================

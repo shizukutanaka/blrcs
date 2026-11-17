@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"blrcs/storage"
+	"github.com/shizukutanaka/blrcs/storage"
 )
 
 // ============================================================================

@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"blrcs/didwebvh"
-	"blrcs/multiformats"
+	"github.com/shizukutanaka/blrcs/didwebvh"
+	"github.com/shizukutanaka/blrcs/multiformats"
 )
 
 // Example demonstrates the did:webvh lifecycle: create a self-certifying DID,
