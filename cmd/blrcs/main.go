@@ -3,6 +3,8 @@
 // Usage:
 //
 //	blrcs doctor     — self-check: verify build, key material, and connectivity
+//	blrcs issue      — sign a product passport claim (JSON) with a local key
+//	blrcs verify     — verify a passport credential offline (did:key) or via did:web
 //	blrcs version    — print version information
 //	blrcs completion — generate shell completion (bash/zsh/fish)
 package main
@@ -14,6 +16,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/shizukutanaka/blrcs/doctor"
@@ -22,12 +25,16 @@ import (
 const version = "1.0.0"
 
 func main() {
-	os.Exit(run(os.Args[1:], os.Stdout, os.Stderr))
+	os.Exit(runIO(os.Args[1:], os.Stdin, os.Stdout, os.Stderr))
 }
 
 // run — testable entry point. Returns the process exit code.
 // os.Exit is confined to main(); all logic here is unit-testable.
 func run(args []string, stdout, stderr io.Writer) int {
+	return runIO(args, strings.NewReader(""), stdout, stderr)
+}
+
+func runIO(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 	if len(args) < 1 {
 		usage(stderr)
 		return 1
@@ -35,6 +42,10 @@ func run(args []string, stdout, stderr io.Writer) int {
 	switch args[0] {
 	case "doctor":
 		return cmdDoctor(args[1:], stdout)
+	case "issue":
+		return cmdIssue(args[1:], stdin, stdout, stderr)
+	case "verify":
+		return cmdVerify(args[1:], stdin, stdout, stderr)
 	case "version":
 		fmt.Fprintf(stdout, "blrcs %s\n", version)
 		return 0
@@ -48,7 +59,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 }
 
 func usage(w io.Writer) {
-	fmt.Fprintln(w, "Usage: blrcs <doctor|version|completion>")
+	fmt.Fprintln(w, "Usage: blrcs <doctor|issue|verify|version|completion>")
 }
 
 func cmdDoctor(args []string, stdout io.Writer) int {
@@ -82,11 +93,11 @@ func cmdCompletion(args []string, stdout, stderr io.Writer) int {
 	}
 	switch args[0] {
 	case "bash":
-		fmt.Fprint(stdout, "# blrcs bash completion\ncomplete -W 'doctor version completion' blrcs\n")
+		fmt.Fprint(stdout, "# blrcs bash completion\ncomplete -W 'doctor issue verify version completion' blrcs\n")
 	case "zsh":
-		fmt.Fprint(stdout, "#compdef blrcs\n_blrcs() { local cmds=(doctor version completion); _describe cmd cmds }\n_blrcs \"$@\"\n")
+		fmt.Fprint(stdout, "#compdef blrcs\n_blrcs() { local cmds=(doctor issue verify version completion); _describe cmd cmds }\n_blrcs \"$@\"\n")
 	case "fish":
-		fmt.Fprint(stdout, "complete -c blrcs -a 'doctor version completion'\n")
+		fmt.Fprint(stdout, "complete -c blrcs -a 'doctor issue verify version completion'\n")
 	default:
 		fmt.Fprintf(stderr, "unknown shell: %s\n", args[0])
 		return 1
