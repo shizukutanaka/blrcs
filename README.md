@@ -43,6 +43,17 @@ go install ./cmd/blrcs-demo/
 # Self-test: 16 subsystems, ~7ms
 blrcs doctor
 
+# Issue a Digital Product Passport from a JSON claim. The signing key is
+# created on first use in ./issuer.key (mode 0600) and never leaves your
+# machine; the issuer DID defaults to the did:key derived from it.
+echo '{"productId":"04012345678901","category":"battery/ev","originCountry":"JP","carbonKgCO2e":48.5,"recyclability":0.82,"phase":"manufacture"}' > claim.json
+blrcs issue claim.json > passport.json
+
+# Anyone can verify it offline — the did:key issuer carries its public key.
+# (--did did:web:your.domain makes verifiers fetch the key from your site.)
+blrcs verify passport.json
+# → VALID: 04012345678901 issued by did:key:z6Mk…
+
 # Live browser demo on Safari 26 / Chrome 141
 blrcs-demo
 # → http://localhost:8090/demo

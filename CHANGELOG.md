@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **`blrcs issue` / `blrcs verify`.** Sign a `PassportClaim` JSON file with a
+  local Ed25519 key (`--key`, created mode 0600 on first use) and verify the
+  resulting credential. The issuer DID defaults to the `did:key` derived from
+  the key, so verification needs no server, account or network; `--did
+  did:web:…` keeps did:web issuers. Unknown claim fields are rejected.
+
 ### Examined and deliberately not changed
 - **Unchecked type assertions on the data path (Axis 168).** Five sites use a
   bare `x.(T)`: `scitt` subtree cache and `telemetry` counter/histogram maps
